@@ -902,7 +902,7 @@ static int gain_index_to_gain(unsigned int index, uint8_t *if_gr_out, uint8_t *l
 static int apply_agc_settings()
 {
 	int r;
-	sdrplay_api_AgcControlT agc = agc_state ? sdrplay_api_AGC_CTRL_EN : sdrplay_api_AGC_DISABLE;
+    sdrplay_api_AgcControlT agc = agc_state ? sdrplay_api_AGC_DISABLE : sdrplay_api_AGC_CTRL_EN;
 
 	chParams->ctrlParams.agc.enable = agc;
 	chParams->ctrlParams.agc.setPoint_dBfs = agc_set_point;
