@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8AEC52832860F6AF00FDB99F"
-               BuildableName = "RSPTCPServer"
+               BuildableName = "rsp_tcp"
                BlueprintName = "rsp_tcp"
                ReferencedContainer = "container:RSPTCPServer.xcodeproj">
             </BuildableReference>
@@ -45,11 +45,21 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8AEC52832860F6AF00FDB99F"
-            BuildableName = "RSPTCPServer"
+            BuildableName = "rsp_tcp"
             BlueprintName = "rsp_tcp"
             ReferencedContainer = "container:RSPTCPServer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-v"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-b 16"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -62,7 +72,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8AEC52832860F6AF00FDB99F"
-            BuildableName = "RSPTCPServer"
+            BuildableName = "rsp_tcp"
             BlueprintName = "rsp_tcp"
             ReferencedContainer = "container:RSPTCPServer.xcodeproj">
          </BuildableReference>

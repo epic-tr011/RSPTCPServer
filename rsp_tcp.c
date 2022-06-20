@@ -1720,59 +1720,43 @@ static void *command_worker(void *arg)
 
 			// Extended mode commands
 		case RSP_TCP_COMMAND_SET_ANTENNA:
-			if (extended_mode) {
 				printf("set antenna input %d\n", ntohl(cmd.param));
 				set_antenna_input((unsigned int)ntohl(cmd.param));
-			}
 			break;
 
 		case RSP_TCP_COMMAND_SET_NOTCH:
-			if (extended_mode) {
 				printf("set notch filter 0x%x\n", ntohl(cmd.param));
 				set_notch_filters((unsigned int)ntohl(cmd.param));
-			}
 			break;
 
 		case RSP_TCP_COMMAND_SET_LNASTATE:
-			if (extended_mode) {
 				printf("set LNAState %d\n", ntohl(cmd.param));
 				set_lna((unsigned int)ntohl(cmd.param));
-			}
 			break;
 
 		case RSP_TCP_COMMAND_SET_IF_GAIN_R:
-			if (extended_mode) {
 				printf("set if gain reduction %d\n", ntohl(cmd.param));
 				set_if_gain_reduction((int)ntohl(cmd.param));
-			}
 			break;
 
 		case RSP_TCP_COMMAND_SET_AGC:
-			if (extended_mode) {
 				printf("set agc %d\n", ntohl(cmd.param));
 				set_agc((unsigned int)ntohl(cmd.param));
-			}
 			break;
 
 		case RSP_TCP_COMMAND_SET_AGC_SETPOINT:
-			if (extended_mode) {
 				printf("set agc set point %d\n", ntohl(cmd.param));
 				set_agc_setpoint((int)ntohl(cmd.param));
-			}
 			break;
 
 		case RSP_TCP_COMMAND_SET_BIAST:
-			if (extended_mode) {
 				printf("set bias-t %d\n", ntohl(cmd.param));
 				set_bias_t((unsigned int)ntohl(cmd.param));
-			}
 			break;
 
 		case RSP_TCP_COMMAND_SET_REFOUT:
-			if (extended_mode) {
 				printf("set reference out %d\n", ntohl(cmd.param));
 				set_refclock_output((unsigned int)ntohl(cmd.param));
-			}
 			break;
 
 		default:
@@ -2214,7 +2198,7 @@ int main(int argc, char **argv)
 		setsockopt(s, SOL_SOCKET, SO_LINGER, (char *)&ling, sizeof(ling));
 
 		printf("client accepted!\n");
-
+/*
 		memset(&dongle_info, 0, sizeof(dongle_info));
 		memcpy(&dongle_info.magic, "RTL0", 4);
 
@@ -2252,7 +2236,7 @@ int main(int argc, char **argv)
 				printf("failed to send RSP capabilities information\n");
 			}
 		}
-
+*/
 		// must start the tcp_worker before the first samples are available from the rx
 		// because the rx_callback tries to send a condition to the worker thread
 		pthread_attr_init(&attr);
