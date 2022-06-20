@@ -2,3 +2,7 @@
 packages
 Release
 build/
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+.DS_Store
