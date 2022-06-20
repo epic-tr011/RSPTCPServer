@@ -2247,8 +2247,8 @@ int main(int argc, char **argv)
 			break;
 		}
 
-		// initialise API and start the rx		
-		r = init_rsp_device(samp_rate, frequency, enable_biastee, notch, enable_refout, antenna);
+		// initialise API and start the rx
+		r = init_rsp_device(DEFAULT_SAMPLERATE, DEFAULT_FREQUENCY, enable_biastee, notch, enable_refout, antenna);
 		if (r != 0) {
 			printf("failed to initialise RSP device\n");
 			break;
